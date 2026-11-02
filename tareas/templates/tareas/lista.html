@@ -24,6 +24,7 @@
                     {% csrf_token %}
                     <button type="submit">Eliminar</button>
                 </form>
+                <a href="{% url 'editar' tarea.pk %}">Editar</a>
             </li>
         {% empty %}
             <li>No hay tareas pendientes.</li>
@@ -49,6 +50,7 @@
                     {% csrf_token %}
                     <button type="submit">Eliminar</button>
                 </form>
+                <a href="{% url 'editar' tarea.pk %}">Editar</a>
             </li>
         {% empty %}
             <li>No hay tareas completadas.</li>
