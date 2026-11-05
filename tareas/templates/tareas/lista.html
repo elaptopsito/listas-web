@@ -5,6 +5,10 @@
     <title>Lista de tareas</title>
 </head>
 <body>
+    <form method="post" action="{% url 'logout' %}" style="display:inline">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
     <form method="post" action="{% url 'agregar' %}">
         {% csrf_token %}
         <input type="text" name="texto" placeholder="Nueva Tarea" required>
