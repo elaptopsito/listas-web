@@ -1,0 +1,262 @@
+:root {
+    --fondo: #000000;
+    --superficie: #111111;
+    --borde: #262626;
+    --texto: #f5f5f5;
+    --texto-suave: #8a8a8a;
+    --acento: #ffffff;
+    --radio: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 380px;
+    padding: 24px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+form {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+form p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+input[type="text"],
+input[type="password"] {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    color: var(--texto);
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="texto"]:focus,
+input[type="texto"]:focus {
+    border-color: var(--acento);
+}
+
+button {
+    background: var(--acento);
+    color: #000000;
+    border: none;
+    border-radius: var(--radio);
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.enlace-pie {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+a {
+    color: var(--texto);
+    text-decoration: none;
+    border-bottom: 1px solid var(--borde);
+}
+
+a:hover {
+    border-bottom-color: var(--acento);
+}
+
+.errorlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #ff6b6b;
+    font-size: 0.85rem;
+}
+
+.contenedor-ancho {
+    max-width: 560px;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.barra h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.barra form {
+    flex-direction: row;
+    margin: 0;
+}
+
+.barra button {
+    background: transparent;
+    color: var(--texto);
+    border: 1px solid var(--borde);
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.barra button:hover {
+    border-color: var(--acento);
+    opacity: 1;
+}
+
+.agregar {
+    flex-direction: row;
+    margin-bottom: 24px;
+}
+
+.agregar input {
+    flex: 1;
+}
+
+.seccion {
+    margin-bottom: 32px;
+}
+
+.seccion-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 12px;
+}
+
+.seccion-titulo form {
+    margin: 0;
+    flex-direction: row;
+}
+
+.seccion-titulo button {
+    background: transparent;
+    color: var(--texto-suave);
+    border: none;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.seccion-titulo button:hover {
+    color: var(--texto);
+    opacity: 1;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 12px 14px;
+}
+
+.tarea-texto {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.tarea.hecha .tarea-texto {
+    color: var(--texto-suave);
+    text-decoration: line-through;
+}
+
+.acciones {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.acciones form {
+    margin: 0;
+    flex-direction: row;
+}
+
+.acciones a,
+.acciones button {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--texto-suave);
+    font-weight: 500;
+}
+
+.acciones a:hover,
+.acciones button:hover {
+    color: var(--texto);
+    border-color: var(--acento);
+    opacity: 1;
+}
+
+.vacio {
+    color: var(--texto-suace);
+    font-size: 0.9rem;
+    padding: 12px 0;
+    margin: 0;
+}
+
